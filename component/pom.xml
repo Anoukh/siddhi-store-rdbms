@@ -381,7 +381,7 @@
                                             <MYSQL_ROOT_PASSWORD>root</MYSQL_ROOT_PASSWORD>
                                         </env>
                                         <ports>
-                                            <port>${das-mysql.port}:3306</port>
+                                            <port>32901:3306</port>
                                         </ports>
                                         <wait>
                                             <tcp>
@@ -421,7 +421,7 @@
                                 <DATABASE_TYPE>MySQL</DATABASE_TYPE>
                                 <DATABASE_USER>root</DATABASE_USER>
                                 <DATABASE_PASSWORD>root</DATABASE_PASSWORD>
-                                <PORT>${das-mysql.port}</PORT>
+                                <PORT>32901</PORT>
                                 <DOCKER_HOST_IP>${docker.container.das-mysql.ip}</DOCKER_HOST_IP>
                             </environmentVariables>
                             <suiteXmlFiles>
@@ -469,7 +469,7 @@
                                             <POSTGRES_DB>dasdb</POSTGRES_DB>
                                         </env>
                                         <ports>
-                                            <port>${das-postgres.port}:5432</port>
+                                            <port>32903:5432</port>
                                         </ports>
                                         <wait>
                                             <tcp>
@@ -509,7 +509,7 @@
                                 <DATABASE_TYPE>POSTGRES</DATABASE_TYPE>
                                 <DATABASE_USER>root</DATABASE_USER>
                                 <DATABASE_PASSWORD>root</DATABASE_PASSWORD>
-                                <PORT>${das-postgres.port}</PORT>
+                                <PORT>32903</PORT>
                                 <DOCKER_HOST_IP>${docker.container.das-postgres.ip}</DOCKER_HOST_IP>
                             </environmentVariables>
                             <suiteXmlFiles>
@@ -561,7 +561,7 @@
                                             <SA_PASSWORD>wso2das123#</SA_PASSWORD>
                                         </env>
                                         <ports>
-                                            <port>${das-mssql.port}:1433</port>
+                                            <port>32905:1433</port>
                                         </ports>
                                         <wait>
                                             <log>Service Broker manager has started.</log>
@@ -597,7 +597,7 @@
                                 <DATABASE_TYPE>MSSQL</DATABASE_TYPE>
                                 <DATABASE_USER>sa</DATABASE_USER>
                                 <DATABASE_PASSWORD>wso2das123#</DATABASE_PASSWORD>
-                                <PORT>${das-mssql.port}</PORT>
+                                <PORT>32905</PORT>
                                 <DOCKER_HOST_IP>${docker.container.das-mssql.ip}</DOCKER_HOST_IP>
                             </environmentVariables>
                             <suiteXmlFiles>
@@ -643,7 +643,7 @@
                                             <ORACLE_PWD>root</ORACLE_PWD>
                                         </env>
                                         <ports>
-                                            <port>${das-oracle.port}:1521</port>
+                                            <port>32907:1521</port>
                                         </ports>
                                         <wait>
                                             <log>DATABASE IS READY TO USE!</log>
@@ -680,7 +680,7 @@
                                 <DATABASE_TYPE>ORACLE</DATABASE_TYPE>
                                 <DATABASE_USER>system</DATABASE_USER>
                                 <DATABASE_PASSWORD>root</DATABASE_PASSWORD>
-                                <PORT>${das-oracle.port}</PORT>
+                                <PORT>32907</PORT>
                                 <DOCKER_HOST_IP>${docker.container.das-oracle.ip}</DOCKER_HOST_IP>
                             </environmentVariables>
                             <argLine>-Duser.timezone=GMT</argLine>
@@ -732,7 +732,7 @@
                                             <shell>db2start</shell>
                                         </cmd>
                                         <ports>
-                                            <port>${das-db2.port}:50000</port>
+                                            <port>32909:50000</port>
                                         </ports>
                                         <wait>
                                             <log>SQL1063N DB2START processing was successful.</log>
@@ -768,7 +768,7 @@
                                 <DATABASE_TYPE>DB2</DATABASE_TYPE>
                                 <DATABASE_USER>db2inst1</DATABASE_USER>
                                 <DATABASE_PASSWORD>db2inst1-pwd</DATABASE_PASSWORD>
-                                <PORT>${das-db2.port}</PORT>
+                                <PORT>32909</PORT>
                                 <DOCKER_HOST_IP>${docker.container.das-db2.ip}</DOCKER_HOST_IP>
                             </environmentVariables>
                             <suiteXmlFiles>
